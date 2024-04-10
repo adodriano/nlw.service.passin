@@ -31,7 +31,8 @@ jobs:
     - name: Push image
       run: |
        docker push adadriano/nlw.service.passin:${{ steps.generate_sha.outputs.sha }}
-
+       docker tag adadriano/nlw.service.passin:${{ steps.generate_sha.outputs.sha }} adadriano/nlw.service.passin:latest
+       docker push adadriano/nlw.service.passin:latest
 
 
 
